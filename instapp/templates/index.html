@@ -8,7 +8,8 @@
                         <div class="col-md-2 col-lg-2 col-xs-1 col-sm-1"></div>
 
                         <div class="col-md-8 col-lg-8 col-xs-9 col-sm-9">
-                        <p><b>{{user | title}}</b>New to Instakid?<a href="{% url 'edit' %}" class="btn btn-primary">please create a profile</a></p>
+                        <p><b>{{user | title}}</b> New to InstaKid<a href="{% url 'edit' %}" class="btn btn-info">  create a profile</a>
+                      </p>
                                 {% for img in images %}
                                 {% if img.image %}
                                 <div class="card">
