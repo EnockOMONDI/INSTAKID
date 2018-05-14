@@ -75,3 +75,39 @@ def upload(request):
             return render(request,'upload/new.html',{"title":title,
                                                     "user":current_user,
                                                     "form":form})
+
+
+
+@login_required(login_url="/accounts/login/")
+def search_results(request):
+    current_user = request.user
+    profile = Profile.get_profile()
+    if 'username' in request.GET and request.GET["username"]:
+        search_term = request.GET.get("username")
+        searched_name = Profile.find_profile(search_term)
+        message = search_term
+
+        return render(request,'search.html',{"message":message,
+                                             "profiles":profile,
+                                             "user":current_user,
+                                             "username":searched_name})
+    else:
+        message = "You haven't searched for any term"
+        return render(request,'search.html',{"message":message})
+
+@login_required(login_url='/accounts/login/')
+def new_comment(request,pk):
+    image = get_object_or_404(Image, pk=pk)
+    current_user = request.user
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.image = image
+            comment.user = current_user
+            comment.save()
+            return redirect('home')
+    else:
+        form = CommentForm()
+    return render(request, 'comment.html', {"user":current_user,
+                                            "comment_form":form})
