@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+{{block.super}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+            <h1>View Your Information</h1>
+            <p><a href="{% url 'profile' %}" class="btn btn-default" >Back to Profile</a></p>
+            {% for profile in settings %}
+                <p>{{profile.user.first_name | title}} {{profile.user.last_name | title}}</p>
+                <p>username: <i>{{profile.user.username | title}}</i></p>
+                <p>Email Address: {{profile.user.email}}</p>
+                <p>You joined instagram on: <i>{{profile.user.date_joined}}</i></p>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
