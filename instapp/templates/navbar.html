@@ -4,9 +4,9 @@
 <link rel="stylesheet" href="{% static 'css/nav.css' %}">
 {% if user.is_authenticated %}
 <nav class="navbar fixed-top">
-    <section class="logo-section"><img class="logo" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/>
-      <div></div><a href="{% url 'home' %}"><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"/></a>
-    </section>
+    <!-- <section class="logo-section"><img class="logo" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/>
+    <a href="{% url 'home' %}"><img class="logoname" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"/></a>
+    </section> -->
     <form class="search-section" role="search" action="{% url 'search' %}">
       <input class="input-search" type="search" name="username" placeholder="Search Username"/>
     </form>
