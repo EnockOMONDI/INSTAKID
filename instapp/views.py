@@ -28,3 +28,11 @@ def profile(request):
                                                   "image":image,
                                                   "user":current_user,
                                                   "profile":profile,})
+
+
+@login_required(login_url='/accounts/login/')
+def settings(request):
+    title = 'Insta-Gram'
+    settings = Profile.get_profile()
+    return render(request,'profile/settings.html',{"settings":settings,
+                                                    "title":title,})
