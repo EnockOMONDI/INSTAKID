@@ -69,3 +69,26 @@ class Image(models.Model):
     def get_image_by_id(cls,id):
         image = Image.objects.filter(id=Image.id)
         return image
+
+class Comment(models.Model):
+    comments = models.CharField(max_length=60,blank=True,null=True)
+    comment_date = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User)
+    image = models.ForeignKey(Image,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.comments
+
+    class Meta:
+        ordering = ['-comment_date']
+
+    def save_comment(self):
+        return self.save()
+
+    def delete_comment(self):
+        self.delete()
+
+    @classmethod
+    def get_comment(cls):
+        comment = Comment.objects.all()
+        return comment
