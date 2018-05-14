@@ -1,0 +1,31 @@
+{% bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %}
+
+        <title>{{title}}</title>
+    {% else %}
+
+        <title>InstaKid</title>
+    {% endif %}
+    {% block styles %}
+        {% bootstrap_css %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+     <link rel="shortcut icon" type="image/png" href="{% static 'images/PIN3.png' %}"/>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+</html>
