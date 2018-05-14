@@ -17,6 +17,5 @@ url(r'^view_profile/(?P<pk>\d+)',views.view_your_profile,name='yourprofile'),
 url(r'^like/(?P<operation>.+)/(?P<pk>\d+)',views.like, name='like'),
 ]
 
-]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
