@@ -27,9 +27,9 @@
 ###### Deployment
 * HEROKU
 
-- For developers view the specifications [here](https://github.com/EnockOMONDI/INSTAKID/blob/master/requirments.txt)
+##For developers view the specifications [here](https://github.com/EnockOMONDI/INSTAKID/blob/master/requirments.txt)
 
-## Installing
+### Installing
 ```
 Clone  from my github(https://github.com/EnockOMONDI/INSTAKID)
 ```
