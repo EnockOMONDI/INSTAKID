@@ -1,3 +1,4 @@
+![INSTAKID](instakid.png)
 # INSTAGRAM CLONE (INSTAKID)
 #### This is a web application that allows different users to upload their favorite images view different users and their images. It also allows users to comment and like different images
 
