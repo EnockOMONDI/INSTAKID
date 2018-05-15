@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  {%if title%}
-
+  {% if title %}
   <title>{{title}}</title>
-
-  {%endif%}
+  {% else %}
+      <title>InstaKid</title>
+  {% endif %}
 
   {% block styles %}
     {% bootstrap_css %}

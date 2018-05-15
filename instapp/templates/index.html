@@ -13,7 +13,7 @@
           {% if img.image %}
           <div class="card">
                   <div class="card-header">
-                          <img src="{{img.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:10%;height:10%">
+                          <img src="{{img.profile.profilePic.url}}" class="img-fluid rounded-circle" style="width:4%;height:4%">
                           {% if profile.user.id == img.user.id %}
                           <a href="{% url 'profile' %}">{{img.user.username}}</a>
                           {% else %}
