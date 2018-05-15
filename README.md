@@ -50,7 +50,7 @@ run python3.6 manage.py runserver to run app on local server
 
 ### Meta
 -Feel free to add features (just fork it)
-Incase of any queries, email me at - [Enock OMONDI](djseanizellkenya@gmail.com)
+Incase of any queries, email me at -(djseanizellkenya@gmail.com)
 <br>
 Github - [Enock OMONDI](https://github.com/EnockOMONDI)
 
