@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 @login_required(login_url='/accounts/login/')
 def home(request):
-    title = 'Insta-Gram'
+    title = 'InstaKid'
     current_user = request.user
     profile = Profile.get_profile()
     image = Image.get_images()
@@ -21,7 +21,7 @@ def home(request):
 
 @login_required(login_url='/accounts/login/')
 def profile(request):
-    title = 'Insta-Gram'
+    title = 'InstaKid'
     current_user = request.user
     profile = Profile.get_profile()
     image = Image.get_images()
@@ -35,7 +35,7 @@ def profile(request):
 
 @login_required(login_url='/accounts/login/')
 def settings(request):
-    title = 'Insta-Gram'
+    title = 'InstaKid'
     settings = Profile.get_profile()
     return render(request,'profile/settings.html',{"settings":settings,
                                                     "title":title,})
